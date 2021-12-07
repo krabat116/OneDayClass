@@ -22,12 +22,12 @@
   <div class="wrap">
 	<form id="login_form" method="post">  
 	
-	<div class="logo_wrap">
-			<span>Login</span>
-			
-			
-	</div>
+	
 			<div class="login_wrap">
+				<div class="logo_wrap">
+					<span>Login</span>	
+	            </div>
+				
 				<div class="login_sns">
             		<li><a href=""><i class="fab fa-instagram"></i></a></li>
             		<li><a href=""><i class="fab fa-google"></i></i></a></li>
