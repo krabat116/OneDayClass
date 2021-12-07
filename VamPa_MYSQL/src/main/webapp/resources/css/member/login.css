@@ -6,6 +6,16 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
 /* 화면 전체 렙 */
 .wrapper{
 	width: 1900px;	
@@ -95,4 +105,27 @@
 /* float 속성 해제 */
 .clearfix{
 	clear: both;
+}
+
+
+.login_sns {
+  padding: 50px;
+  display: flex;
+}
+
+.login_sns li {
+  padding: 0px 20px;
+}
+
+.login_sns a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 70px;
+  background: #fcf4ec;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1);
 }

@@ -6,21 +6,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link rel="stylesheet" href="/resources/css/member/login.css">
 </head>
 <body>
 
+
 <div class="wrapper">
   <div class="wrap">
+
 	<form id="login_form" method="post">  
+	
+	
+	
+	
+	
 	<div class="logo_wrap">
 			<span>Login</span>
 	</div>
 	<div class="login_wrap">
+	
+	       <div class="login_sns">
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-google"></i></i></a></li>
+            <li><a href=""><i class="fas fa-comment-dots"></i></a></li>
+            </div> 
+	
 			<div class="id_wrap">
 					<span>ID</span>
 					<div class="id_input_box">
