@@ -24,14 +24,15 @@
 	
 	<div class="logo_wrap">
 			<span>Login</span>
-			<div class="login_sns">
-            <li><a href=""><i class="fab fa-instagram"></i></a></li>
-            <li><a href=""><i class="fab fa-google"></i></i></a></li>
-            <li><a href=""><i class="fas fa-comment-dots"></i></a></li>
-            </div>
+			
 			
 	</div>
-	<div class="login_wrap">
+			<div class="login_wrap">
+				<div class="login_sns">
+            		<li><a href=""><i class="fab fa-instagram"></i></a></li>
+            		<li><a href=""><i class="fab fa-google"></i></i></a></li>
+            		<li><a href=""><i class="fas fa-comment-dots"></i></a></li>
+            	</div>
 	      
 					<span>ID</span>
 					<div class="id_input_box">
