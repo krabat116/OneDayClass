@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/admin/goodsEnroll.css">
+<link rel="stylesheet" href="../resources/css/admin/creatorManage.css">
  
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -42,10 +43,10 @@
                           <a class="admin_list_02" href="/admin/goodsManage">상품 관리</a>
                       </li>
                       <lI>
-                          <a class="admin_list_03" href="/admin/authorEnroll">작가 등록</a>                            
+                          <a class="admin_list_03" href="/admin/creatorEnroll" style = "font-size:25px;">크리에이터 등록</a>                            
                       </lI>
                       <lI>
-                          <a class="admin_list_04" href="/admin/authorManage">작가 관리</a>                            
+                          <a class="admin_list_04" href="/admin/creatorManage" style = "font-size:25px;">크리에이터 관리</a>                            
                       </lI>
                       <lI>
                           <a class="admin_list_05">회원 관리</a>                            
@@ -53,7 +54,7 @@
                   </ul>
                 </div>
                 <div class="admin_content_wrap">
-                    <div class="admin_content_subject"><span>상품 등록</span></div>
+                    <div class="admin_content_subject"><span>크리에이터 관리</span></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -98,6 +99,28 @@
         
     </div>    <!-- class="wrap" -->
 </div>    <!-- class="wrapper" -->
+
+<script>
+$(document).ready(function(){
+
+	let result = '<c:out value="${enroll_result}"/>';
+	
+	checkResult(result);
+	
+	function checkResult(result){
+		
+		if(result === ''){
+			return;
+		}
+		
+		alert("'${enroll_result}'님 크리에이터로 등록됐습니다.");
+		
+	}
+})
+
+
+
+</script>
  
 </body>
 </html>
