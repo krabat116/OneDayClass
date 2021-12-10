@@ -16,56 +16,20 @@
 </head>
 <body>
  
-    <div class="wrapper">
-        <div class="wrap">
-            <!-- gnv_area -->    
-            <div class="top_gnb_area">
-                <ul class="list">    
-                    <li><a href="/main">메인 페이지</a></li>
-                    <li><a href="/member/logout.do">로그아웃</a></li>
-                    <li>고객센터</li>            
-                </ul>
-            </div>
-            <!-- top_subject_area -->
-            <div class="admin_top_wrap">
-                <span>관리자 페이지</span>
-                
-            </div>
-            <!-- contents-area -->
-            <div class="admin_wrap">
-                <!-- 네비영역 -->
-                <div class="admin_navi_wrap">
-                  <ul>
-                      <li >
-                          <a class="admin_list_01" href="/admin/goodsEnroll">상품 등록</a>
-                      </li>
-                      <li>
-                          <a class="admin_list_02" href="/admin/goodsManage">상품 관리</a>
-                      </li>
-                      <lI>
-                          <a class="admin_list_03" href="/admin/creatorEnroll" style = "font-size:25px;">크리에이터 등록</a>                            
-                      </lI>
-                      <lI>
-                          <a class="admin_list_04" href="/admin/creatorManage" style = "font-size:25px;">크리에이터 관리</a>                            
-                      </lI>
-                      <lI>
-                          <a class="admin_list_05">회원 관리</a>                            
-                      </lI>                                                                                             
-                  </ul>
-                </div>
+   	 	<%@include file="../includes/admin/header.jsp" %>
+   	 	
                 <div class="admin_content_wrap">
                     <div class="admin_content_subject"><span>크리에이터 등록</span></div>
                     	<div class="admin_content_main">
 						    <form action="/admin/creatorEnroll.do" method="post" id="enrollForm">
 						            <div class="form_section">
-						            
-						                
 						                <div class="form_section_title">
 						                    <lavel>USER_ID</lavel>
 						                </div>
 						            
 						                <div class="form_section_content">
 						                    <input name="memberId">
+						                    <span id ="warn_memberId">USER ID를 입력하세요</span>
 						                </div>
 						            </div>
 						            
@@ -76,6 +40,7 @@
 						                </div>
 						                <div class="form_section_content">
 						                    <input name="creator_name">
+						                    <span id = "warn_creator_name">크리에이터 이름을 입력하세요</span>
 						                </div>
 						            </div>
 						            <div class="form_section">
@@ -84,6 +49,7 @@
 						                </div>
 						                <div class="form_section_content">
 						                    <input name="creator_intro" type="text">
+						                    <span id = "warn_creator_intro">크리에이터 소개말을 입력하세요</span>
 						                </div>
 						            </div>	 	          
 						    </form>
@@ -95,62 +61,68 @@
 						</div>
                     
                     
-                    
-                    
-                    
-                    
-                    
-                </div> <!-- admin_content_wrqp end  -->
-                <div class="clearfix"></div>
-            </div>
-        
-        <!-- Footer 영역 -->
-        <div class="footer_nav">
-            <div class="footer_nav_container">
-                <ul>
-                    <li>회사소개</li>
-                    <span class="line">|</span>
-                    <li>이용약관</li>
-                    <span class="line">|</span>
-                    <li>고객센터</li>
-                    <span class="line">|</span>
-                    <li>광고문의</li>
-                    <span class="line">|</span>
-                    <li>채용정보</li>
-                    <span class="line">|</span>
-                </ul>
-            </div>
-        </div> <!-- class="footer_nav" -->
-        
-        <div class="footer">
-            <div class="footer_container">
-                
-                <div class="footer_left">
-                    <img src="../resources/img/Logo.png">
-                </div>
-                <div class="footer_right">
-                    (주) VamBook    대표이사 : OOO
-                    <br>
-                    사업자등록번호 : ooo-oo-ooooo
-                    <br>
-                    대표전화 : oooo-oooo(발신자 부담전화)
-                    <br>
-                    <br>
-                    COPYRIGHT(C) <strong>kimvampa.tistory.com</strong>    ALL RIGHTS RESERVED.
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div> <!-- class="footer" -->        
-        
-    </div>    <!-- class="wrap" -->
-</div>    <!-- class="wrapper" -->
-
+         <%@include file="../includes/admin/footer.jsp" %>
+         
 <script>
 
 /* 등록 버튼 */
+
+
 $("#enrollBtn").click(function(){
-	$("#enrollForm").submit();
-});
+		/* 검사 통과 유무 변수 */
+		let idCheck = false;  // USER_ID
+		let nameCheck = false; //크리에이터 이름
+		let introCheck = false; //크리에이터 소개
+		
+		/* 입력값 변수 */
+		
+		let memberId = $('input[name=memberId]').val();           // 유저 id
+		let creator_name = $('input[name=creator_name]').val();   // 크리에이터 이름
+		let creator_intro = $('input[name=creator_intro]').val(); // 크리에이터 소개
+		
+		/* 공란 경고 span태그 */
+		let wMemberId = $('#warn_memberId');
+		let wCreatorName = $('#warn_creator_name');
+		let wCreatorIntro = $('#warn_creator_intro');
+		
+		/* UserId 공란 체크 */
+		if(memberId === ''){
+			wMemberId.css('display','block');
+			idCheck = false;
+		} else{
+			wMemberId.css('display','none');
+			idCheck = true;
+		}
+		
+		/* 크리에이터 이름 공란 체크 */
+		if(creator_name ===''){
+			$(wCreatorName).css('display','block');
+			nameCheck = false;
+		} else{
+			wCreatorName.css('display','none');
+			nameCheck = true;
+		}
+		
+		/* 크리에이터 소개 공란 체크 */
+		if(creator_intro ==='') {
+			wCreatorIntro.css('display','block');
+			introCheck = false;
+		} else{
+			wCreatorIntro.css('display','none');
+			introCheck = true;
+		}
+		
+		if(idCheck && nameCheck && introCheck){
+			$("#enrollForm").submit();
+		
+		} else{
+			return;
+		}
+		
+		
+ });
+
+
 
 
 /* 취소 버튼 */
