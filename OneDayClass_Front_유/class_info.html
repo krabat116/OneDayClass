@@ -20,21 +20,53 @@
     
     <!-- file image -->
     <script type="text/javascript">
-        function handleFileSelect(){
-               var reader = new FileReader();
-               document.getElementById("preview").innerHTML = "";
+        function handleFileSelect1(){
+            var reader = new FileReader();
+            document.getElementById("preview1").innerHTML = "";
             
             reader.onload=function(event){
                 var img = document.createElement("img");
                 img.setAttribute("src", event.target.result);
-                document.querySelector("div#preview").appendChild(img);
+                document.querySelector("div#preview1").appendChild(img);
+            }
+            reader.readAsDataURL(event.target.files[0]);  
+        }
+
+        function handleFileSelect2(){
+            var reader = new FileReader();
+            document.getElementById("preview2").innerHTML = "";
+            
+            reader.onload=function(event){
+                var img = document.createElement("img");
+                img.setAttribute("src", event.target.result);
+                document.querySelector("div#preview2").appendChild(img);
+            }
+            reader.readAsDataURL(event.target.files[0]);  
+        }
+
+        function handleFileSelect3(){
+            var reader = new FileReader();
+            document.getElementById("preview3").innerHTML = "";
+            
+            reader.onload=function(event){
+                var img = document.createElement("img");
+                img.setAttribute("src", event.target.result);
+                document.querySelector("div#preview3").appendChild(img);
             }
             reader.readAsDataURL(event.target.files[0]);  
         }
         
-        function resetAll(){
-		    document.getElementById("preview").innerHTML = "";
-	    }
+        function resetAll1(){
+            document.getElementById("preview1").innerHTML = "";
+        }
+        
+        function resetAll2(){
+            document.getElementById("preview2").innerHTML = "";
+        }
+        
+        function resetAll3(){
+            document.getElementById("preview3").innerHTML = "";
+        }
     </script>
 
 </head>
@@ -102,24 +134,24 @@
                         <h1>클래스를 통해 무엇을 알려주실 수 있나요</h1>
                     </div>
                     <form>
-                        <div id="preview" >이미지 미리보기</div>
-                        <label for="file" class="btn_basic">파일 업로드</label>&emsp;
-                        <input type="file" name="files" id="file" onchange="handleFileSelect(event)" accept="image/*">
-                        <button type="reset" class="btn_basic" onclick="resetAll();">파일 취소</button> <br>
+                        <div id="preview1" >이미지 미리보기</div>
+                        <label for="file1" class="btn_basic">파일 업로드</label>&emsp;
+                        <input type="file" name="files" class="file1" id="file1" onchange="handleFileSelect1(event)" accept="image/*">
+                        <button type="reset" class="btn_basic" onclick="resetAll1();">파일 취소</button> <br>
                         <textarea type="textarea" class="text" placeholder="설명을 입력해주세요"></textarea>
                     </form>
                     <form>
-                        <div id="preview" >이미지 미리보기</div>
-                        <label for="file" class="btn_basic">파일 업로드</label>&emsp;
-                        <input type="file" name="files" id="file" onchange="handleFileSelect(event)" accept="image/*">
-                        <button type="reset" class="btn_basic">파일 취소</button> <br>
+                        <div id="preview2" >이미지 미리보기</div>
+                        <label for="file2" class="btn_basic">파일 업로드</label>&emsp;
+                        <input type="file" name="files" class="file2" id="file2" onchange="handleFileSelect2(event)" accept="image/*">
+                        <button type="reset" class="btn_basic" onclick="resetAll2();">파일 취소</button> <br>
                         <textarea type="textarea" class="text" placeholder="설명을 입력해주세요"></textarea>
                     </form>
                     <form>
-                        <div id="preview" >이미지 미리보기</div>
-                        <label for="file" class="btn_basic">파일 업로드</label>&emsp;
-                        <input type="file" name="files" id="file" onchange="handleFileSelect(event)" accept="image/*">
-                        <button type="reset" class="btn_basic">파일 취소</button> <br>
+                        <div id="preview3" >이미지 미리보기</div>
+                        <label for="file3" class="btn_basic">파일 업로드</label>&emsp;
+                        <input type="file" name="files" class="file3" id="file3" onchange="handleFileSelect3(event)" accept="image/*">
+                        <button type="reset" class="btn_basic" onclick="resetAll3();">파일 취소</button> <br>
                         <textarea type="textarea" class="text" placeholder="설명을 입력해주세요"></textarea>
                     </form>
                 </div>

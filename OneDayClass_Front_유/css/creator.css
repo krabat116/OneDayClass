@@ -147,6 +147,51 @@ ul, ol {
     height: 190px;
 }
 
+#preview1{
+    width: 242px; 
+    height: 190px;
+    border:1px solid #B9BABC; 
+    text-align: center;
+    margin-left: 10px;
+    color: #B9BABC;
+    font-size: 20pt;
+}
+
+#preview1 > img{
+    width: 242px;
+    height: 190px;
+}
+
+#preview2{
+    width: 242px; 
+    height: 190px;
+    border:1px solid #B9BABC; 
+    text-align: center;
+    margin-left: 10px;
+    color: #B9BABC;
+    font-size: 20pt;
+}
+
+#preview2 > img{
+    width: 242px;
+    height: 190px;
+}
+
+#preview3{
+    width: 242px; 
+    height: 190px;
+    border:1px solid #B9BABC; 
+    text-align: center;
+    margin-left: 10px;
+    color: #B9BABC;
+    font-size: 20pt;
+}
+
+#preview3 > img{
+    width: 242px;
+    height: 190px;
+}
+
 .container #file{
     margin-left: 10px;
 }
@@ -275,4 +320,16 @@ ul, ol {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+}
+
+.container .file1{
+    display: none;
+}
+
+.container .file2{
+    display: none;
+}
+
+.container .file3{
+    display: none;
 }
