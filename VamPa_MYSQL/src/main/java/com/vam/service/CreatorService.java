@@ -4,7 +4,7 @@ import com.vam.model.CreatorVO;
 
 public interface CreatorService {
 	
-	/* 작가등록 */
+	/* 크리에이터 등록 */
 	public void creatorEnroll(CreatorVO creator) throws Exception;
 
 }

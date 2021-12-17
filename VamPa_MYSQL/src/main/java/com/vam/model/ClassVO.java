@@ -1,6 +1,7 @@
 package com.vam.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class ClassVO {
 	
@@ -8,7 +9,7 @@ public class ClassVO {
 	private int class_id;
 	
 	/* 카테고리 코드 */
-	private int cate_code;
+	private String cate_code;
 	
 	/* 크리에이터_id */
 	private int creator_id;
@@ -34,6 +35,9 @@ public class ClassVO {
 	
 	/* 강좌 수정일 */
 	private Date class_update_date;
+	
+	/* 이미지 정보 */
+	private List<AttachImageVO> image_list;
 
 	public int getClass_id() {
 		return class_id;
@@ -43,11 +47,11 @@ public class ClassVO {
 		this.class_id = class_id;
 	}
 
-	public int getCate_code() {
+	public String getCate_code() {
 		return cate_code;
 	}
 
-	public void setCate_code(int cate_code) {
+	public void setCate_code(String cate_code) {
 		this.cate_code = cate_code;
 	}
 
@@ -114,14 +118,27 @@ public class ClassVO {
 	public void setClass_update_date(Date class_update_date) {
 		this.class_update_date = class_update_date;
 	}
+	
 
+	
+
+	public List<AttachImageVO> getImage_list() {
+		return image_list;
+	}
+
+	public void setImage_list(List<AttachImageVO> image_list) {
+		this.image_list = image_list;
+	}
+
+	
 	@Override
 	public String toString() {
 		return "ClassVO [class_id=" + class_id + ", cate_code=" + cate_code + ", creator_id=" + creator_id
 				+ ", class_name=" + class_name + ", class_price=" + class_price + ", class_info=" + class_info
 				+ ", class_tag=" + class_tag + ", class_discount=" + class_discount + ", class_register_date="
-				+ class_register_date + ", class_update_date=" + class_update_date + "]";
+				+ class_register_date + ", class_update_date=" + class_update_date + ", image_list=" + image_list + "]";
 	}
+
 	
 	
 	

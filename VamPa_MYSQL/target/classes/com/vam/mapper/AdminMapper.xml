@@ -5,10 +5,28 @@
 <mapper namespace="com.vam.mapper.AdminMapper">
 
 
-<!-- 강좌 등록 -->
-<insert id="classEnroll">
-	insert into class (cate_code, creator_id, class_name, class_price, class_info, class_tag, class_discount)
-	values (#{cate_code}, #{creator_id}, #{class_name}, #{class_price}, #{class_info}, #{class_tag}, #{class_discount})
-</insert>
+	<!-- 강좌 등록 -->
+	<insert id="classEnroll">
+	
+		<selectKey	resultType="int" keyProperty="class_id" order="AFTER">
+		
+			SELECT LAST_INSERT_ID()
+			
+		</selectKey>
+		
+		insert into class (cate_code, creator_id, class_name, class_price, class_info, class_tag, class_discount)
+		values (#{cate_code}, #{creator_id}, #{class_name}, #{class_price}, #{class_info}, #{class_tag}, #{class_discount})
+	</insert>
+	
+	<!-- 이미지 등록 -->
+	<insert id = "imageEnroll">
+			insert into class_image(class_id, file_name, upload_path, uuid) values(#{class_id},#{file_name},#{upload_path},#{uuid})
+	</insert>
+	
+	<select id="cateList" resultType="com.vam.model.CateVO">
+	
+		select * from class_category order by cate_code
+	
+	</select>
 
 </mapper>

@@ -24,7 +24,7 @@
             <div class="footer_container">
                 
                 <div class="footer_left">
-                    <img src="resources/img/Logo.png">
+                    <img src="..resources/img/LOGO-removebg-preview.png">
                 </div>
                 <div class="footer_right">
                     (주) VamBook    대표이사 : OOO

@@ -181,10 +181,10 @@ a{
     margin: auto;
 }
 .footer_left>img {
-    width: 150%;
-    height: 130px;
-    margin-left: -20px;
-    margin-top: -12px;
+    width: 90%;
+    height: 50px;
+    margin-left: -10px;
+    margin-top: 10px;
 }
 .footer_left{
     float :left;
