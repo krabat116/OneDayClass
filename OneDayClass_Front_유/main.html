@@ -26,7 +26,7 @@
                 <!-- LOGO-->
                 <div class="col-md-4">
                     <div class="header-logo">
-                        <a href="#" class="logo">
+                        <a href="main.html" class="logo">
                             <img src="./img/LOGO-removebg-preview.png">
                         </a>&emsp;&ensp;
                         <ul class="header-category">
@@ -57,7 +57,7 @@
                 <div class="col-md-3 col-xs-5">
                     <div class="account">
                         <ul class="account-section">
-                            <li><a href="#">크리에이터</a></li>&emsp;
+                            <li><a href="class_basic.html">크리에이터</a></li>&emsp;
                             <li><a href="#">로그인</a></li>
                         </ul>
                     </div>
@@ -75,34 +75,40 @@
                 <ul class="main-nav nav navbar-nav">
                     <li class="active"><a href="#">전체 카테고리</a></li>
                     <li class="category">
-                        <a href="#">미술</a>
+                        <a href="#">크리에이티브</a>
                             <ul>
-                                <li><a href="#">드로잉</a></li>
-                                <li><a href="#">공예</a></li>
-                                <li><a href="#">캘리그라피</a></li>
+                                <li><a href="#">드로잉</a>
+                                    <ul>
+                                        <li><a href="#">펜/연필</a></li>
+                                        <li><a href="#">마카</a></li>
+                                        <li><a href="#">색연필</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">음악</a>
+                                    <ul>
+                                        <li><a href="#">악기</a></li>
+                                        <li><a href="#">보컬</a></li>
+                                        <li><a href="#">작곡</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">베이킹</a>
+                                    <ul>
+                                        <li><a href="#">케이크</a></li>
+                                        <li><a href="category.html">제과</a></li>
+                                        <li><a href="#">제빵</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                     </li>
                     <li class="category">
-                        <a href="#">음악</a>
+                        <a href="#">커리어</a>
                         <ul>
-                            <li><a href="#">클래식</a></li>
-                            <li><a href="#">재즈</a></li>
-                            <li><a href="#">보컬</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <a href="#">요리</a>
-                        <ul>
-                            <li><a href="#">식사류</a></li>
-                            <li><a href="#">베이킹</a></li>
-                            <li><a href="#">음료</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <a href="#">코딩</a>
-                        <ul>
-                            <li><a href="#">프론트</a></li>
-                            <li><a href="#">백</a></li>
+                            <li><a href="#">개발</a>
+                                <ul>
+                                    <li><a href="#">Web/프론트엔드</a></li>
+                                    <li><a href="#">서버/백엔드</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -136,32 +142,34 @@
                                     <button class="btn_prd"> <i class="fas fa-chevron-left"></i></button>
                                     <!-- product -->
                                     <div class="product">
-                                        <div class="product-img">
-                                            <img src="./img/Macarons.png" alt="" height="200px">
-                                            <div class="product-select">
-                                                <span class="prd">요리</span>
+                                        <a href="detail.html">
+                                            <div class="product-img">
+                                                <img src="./img/Macarons.png" alt="" height="200px">
+                                                <div class="product-select">
+                                                    <span class="prd">요리</span>
+                                                </div>
+                                                <div class="product-label">
+                                                    <span class="new">NEW</span><br>
+                                                    <span class="sale">-10%</span>
+                                                </div>
                                             </div>
-                                            <div class="product-label">
-                                                <span class="new">NEW</span><br>
-                                                <span class="sale">-10%</span>
+                                            <div class="product-body">
+                                                <p class="product-category">작가이름</p>
+                                                <h3 class="product-name"><a href="detail.html">마카롱 만들기</a></h3>
+                                                <h4 class="product-price">월 45000원 <del class="product-old-price">월 50000원</del></h4>
+                                                <div class="product-rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="product-btns">
+                                                    <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+                                                    <button class="add-to-cart"><i class="fa fa-shopping-cart"></i><span class="tooltipp">add to cart</span></button>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="product-body">
-                                            <p class="product-category">작가이름</p>
-                                            <h3 class="product-name"><a href="#">마카롱 만들기</a></h3>
-                                            <h4 class="product-price">월 45000원 <del class="product-old-price">월 50000원</del></h4>
-                                            <div class="product-rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="product-btns">
-                                                <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                                <button class="add-to-cart"><i class="fa fa-shopping-cart"></i><span class="tooltipp">add to cart</span></button>
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <!-- /product -->
                                     <!-- product -->
@@ -308,10 +316,10 @@
                         <h3 class="title">Top</h3>
                         <div class="section-nav">
                             <ul class="section-tab-nav tab-nav">
-                                <li><a data-toggle="tab" href="#tab2">미술</a></li>&nbsp;
+                                <li><a data-toggle="tab" href="#tab2">드로잉</a></li>&nbsp;
                                 <li><a data-toggle="tab" href="#tab2">음악</a></li>&nbsp;
-                                <li><a data-toggle="tab" href="#tab2">요리</a></li>&nbsp;
-                                <li><a data-toggle="tab" href="#tab2">코딩</a></li>
+                                <li><a data-toggle="tab" href="#tab2">베이킹</a></li>&nbsp;
+                                <li><a data-toggle="tab" href="#tab2">개발</a></li>
                             </ul>
                         </div>
                     </div>
@@ -496,11 +504,6 @@
                         <div class="footer">
                             <h3 class="footer-title">About Us</h3>
                             <p>비트캠프 디지털컨버전스 기반 딥러닝 학습을 이용한 웹 개발자 양성과정 A / 팀: 이름이름</p>
-                            <!-- <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>&emsp;
-                                <li><a href="#"><i class="fa fa-phone"></i>02-123-4567</a></li>&emsp;
-                                <li><a href="#"><i class="fa fa-envelope-o"></i>bit@camp.com</a></li>
-                            </ul> -->
                         </div>
                         <div class="footer">
                             <h3 class="footer-title">Information</h3>
